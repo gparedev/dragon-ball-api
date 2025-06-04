@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dragon Ball - Personajes</title>
+    <!-- estilos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="logo.png">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="titulo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <nav class="navbar">
+            <a href="#contenedorPersonajes">Listado de personajes</a>
+            <a href="#adivinaElPersonaje">Jugar</a>
+        </nav>
+        <div class="buscador">
+            <input type="text" id="inputNumeroPersonaje" placeholder="Introduce el id del personaje" />
+            <button id="btnPedir">Obtener personaje</button>
+        </div>
+        <p><i class="bi bi-info-circle"></i> Selecciona un personaje haciendo click
+            en uno de los de abajo o buscándolo por su ID</p>
+    </header>
+
+    <article>
+        <section id="cajaInfo">
+            <div id="infoImagen"></div>
+            <div id="infoTexto"></div>
+        </section>
+        <h1>Personajes</h1>
+        <section id="contenedorPersonajes"></section>
+
+        <h1>Juego adivina el personaje</h1>
+
+        <section id="adivinaElPersonaje">
+            <h2>¿Quién es este personaje?</h2>
+            <div id="imagenJuego"></div>
+            <div class="buscador-juego">
+                <input type="text" id="inputNombreJuego" placeholder="Adivina..." />
+                <button id="btnComprobar">Comprobar</button>
+            </div>
+            <p id="puntuacion">Puntuación </p>
+        </section>
+    </article>
+
+    <footer>
+        <a href="#">
+            <h1>Personajes</h1>
+            <img src="images/logo-dragon-ball.svg" alt="">
+            <p>Por Gustavo Paredes</p>
+        </a>
+    </footer>
+    
+</body>
+
+</html>

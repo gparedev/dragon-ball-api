@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* GENERALES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+h1 {
+    margin: 40px auto 0 auto;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    font-weight: lighter;
+    background-color: #FF8C00;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    color: white;
+    cursor: default;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #9c5600;
+    border-radius: 20px;
+    color: black;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #9c5600;
+    border-radius: 20px;
+}
+
+button:active {
+    background-color: #794200;
+    box-shadow: inset -3px -3px 0px rgba(0, 0, 0, 1);
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.titulo img {
+    width: 50px;
+    object-fit: contain;
+}
+
+input,
+button {
+    font-family: "Quicksand", sans-serif;
+    border-radius: 20px;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    margin: 8px;
+}
+
+input {
+    width: 80%;
+    max-width: 400px;
+}
+
+button {
+    font-family: "Orbitron", sans-serif;
+}
+
+/* INFO PERSONAJE */
+#cajaInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: white;
+    margin: 20px auto 0 auto;
+    width: 90%;
+    max-width: 900px;
+    height: fit-content;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#infoImagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    min-width: 150px;
+    max-width: 300px;
+    height: auto;
+    padding: 16px 8px 16px 16px;
+}
+
+#infoImagen img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+}
+
+#infoTexto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    padding: 16px 16px 16px 8px;
+    font-size: 18px;
+}
+
+#infoTexto p,
+#infoTexto h2 {
+    margin: 10px 0;
+    word-break: break-word;
+}
+
+/* TODOS LOS PERSONAJES */
+#contenedorPersonajes {
+    width: 90%;
+    margin: 20px auto 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 1200px;
+    justify-items: center;
+}
+
+#contenedorPersonajes img {
+    height: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.cajaMiniPersonaje:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* JUEGO */
+#adivinaElPersonaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto 50px auto;
+    padding: 16px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#imagenJuego img {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.buscador-juego {
+    display: flex;
+}
+
+#inputNombreJuego {
+    width: 100%;
+    border: 1px solid black;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 40px;
+}
+
+footer img {
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .titulo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    #cajaInfo {
+        flex-direction: column;
+        align-items: center;
+        width: 98%;
+        min-width: unset;
+        max-width: 98vw;
+        padding: 8px;
+    }
+
+    #infoImagen {
+        width: 90%;
+        max-width: 350px;
+        padding: 16px 0 8px 0;
+    }
+
+    #infoTexto {
+        width: 98%;
+        align-items: center;
+        padding: 8px 0 16px 0;
+        font-size: 16px;
+    }
+
+    #infoTexto p,
+    #infoTexto h2 {
+        text-align: center;
+    }
+
+    #contenedorPersonajes {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .buscador-juego {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #contenedorPersonajes {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #contenedorPersonajes {
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+}
