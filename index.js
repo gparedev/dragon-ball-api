@@ -23,19 +23,21 @@ window.addEventListener("DOMContentLoaded", function () {
         }
         // Si el número es válido, realiza la petición a la API
         else if (numero) {
+            // fetch devuelve una promesa que, al resolverse, entrega un objeto Response
             fetch(`https://dragonball-api.com/api/characters/${numero}`)
-                // el primer .then recibe la respuesta de la API
+                // el primer .then recibe el objeto Response de la API
                 .then(response => {
                     console.log(response.status);
                     // verifica si la respuesta es exitosa
                     if (!response.ok) {
-                        // Si no es exitosa, lanza un error para que lo capture el catch
+                        // si no es exitosa, lanza un error para que lo capture el catch
                         throw new Error("Personaje no encontrado");
                     }
-                    // si es exitosa, convierte la respuesta a JSON
+                    // si es exitosa, convierte la respuesta a JSON (esto también devuelve una promesa)
                     return response.json();
                 })
-                // el segundo .then recibe los datos ya convertidos a objeto JS
+                // el segundo .then recibe los datos ya convertidos a objeto JS (data)
+                // Ese 'data' es el resultado de response.json() y va pasando de then en then
                 .then(data => {
                     document.getElementById("infoImagen").style.display = "block";
                     mostrarDatos(data);
