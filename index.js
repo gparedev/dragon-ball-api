@@ -157,13 +157,13 @@ window.addEventListener("DOMContentLoaded", function () {
                 alert("⚠️ Debes introducir un nombre de personaje");
             } else if (inputRespuesta === nombrePersonaje) {
                 alert("🎉 ¡Correcto! Has adivinado el personaje.");
-                document.getElementById("inputNombreJuego").value = ""; // Limpiar el campo de respuesta
+                document.getElementById("inputNombreJuego").value = "";
                 puntuacion++;
                 document.getElementById("puntuacion").innerText = `Puntuación: ${puntuacion}`;
-                juegoAdvinaPersonaje(); // Reiniciar el juego
+                juegoAdvinaPersonaje();
             } else {
                 alert(`❌ Incorrecto. El personaje era ${nombreCorrecto}`);
-                document.getElementById("inputNombreJuego").value = ""; // Limpiar el campo de respuesta
+                document.getElementById("inputNombreJuego").value = "";
                 juegoAdvinaPersonaje();
             }
         }
